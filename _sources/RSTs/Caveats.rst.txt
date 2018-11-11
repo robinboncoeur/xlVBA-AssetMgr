@@ -20,9 +20,9 @@ Asset Manager is all contained in a stand-alone Excel workbook. Although I would
 
 VBA itself is not the stellar language to write solutions in one could hope or wish for, and my knowledge on how it works is a bit less than comprehensive. Therefore, someone following me in trying to maintain/fix the code may wonder at some of the kludges I employed. As I learn more on how to do this all properly, the kludges are being removed/replaced, but whilst I try to be as professional as I could developing this tool, Asset Manager is pedestrian code at best.
 
-The developer of this tool makes no claims as to the accuracy or reliability of the data, nor are there any guarantees, implied or real, as to the document's fitness for purpose. I.e., it is presented and delivered as-is. Please keep this in mind when using this tool.
+The developer of this tool makes no claims as to the accuracy or reliability of the data, nor are there any guarantees, implied or real, as to the document's fitness for purpose. I.e., it is presented and delivered as-is. Please keep this in mind when using this tool. I ask the user's patience with the code... it is what it is.
 
-The code supporting the use of this document - i.e., the "software" - is FOSS (free/open-source software). Please see the main page for the licence agreement associated with this software. Therefore, I ask the user's patience with the code... it is what it is.
+The code supporting the use of this document - i.e., the "software" - is FOSS: free/open-source software. Please see the :ref:`am-licence` page for the licence agreement associated with this software.
 
 If you manage to break it, you get to keep both pieces.
 
@@ -35,8 +35,8 @@ Whilst software developers endeavour to write clean, robust software with consis
 A number of means exist to contact the developer:
 
    * gmail: robinseahahn@gmail.com
-   * `github issues page <https://github.com/robinboncoeur/xlVBA-AssetMgr/issues>`_
+   * `Github's Asset Manager software bugs and issues <https://github.com/robinboncoeur/xlVBA-AssetMgr/issues>`_
 
 To find the most current documentation - a (probably) updated version of this document - go to:
    
-   * `my Github CallSheet page <https://robinboncoeur.github.io/xlVBA-AssetMgr/>`_ 
+   * `my Github Asset Manager page <https://robinboncoeur.github.io/xlVBA-AssetMgr/>`_ 
