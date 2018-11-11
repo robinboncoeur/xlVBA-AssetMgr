@@ -35,4 +35,8 @@ Whilst software developers endeavour to write clean, robust software with consis
 A number of means exist to contact the developer:
 
    * gmail: robinseahahn@gmail.com
-   * github: robinboncoeur
+   * `github issues page <https://github.com/robinboncoeur/xlVBA-AssetMgr/issues>`_
+
+To find the most current documentation - a (probably) updated version of this document - go to:
+   
+   * `my Github CallSheet page <https://robinboncoeur.github.io/xlVBA-AssetMgr/>`_ 
