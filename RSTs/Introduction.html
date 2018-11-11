@@ -1,0 +1,295 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Introduction &mdash; Asset Manager 2.25 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Getting Started" href="GetStarted.html" />
+    <link rel="prev" title="Welcome to Asset Manager’s documentation" href="../index.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Asset Manager
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#welcome-to-asset-manager">Welcome to Asset Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-best-use-help">How to Best Use Help</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#conventions-and-glossary-of-terms">Conventions and Glossary of Terms</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="GetStarted.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Worksheets.html">The Worksheets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FormsIntro.html">Equipment Management - The Forms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="EquipMain.html">Equipment Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="EditEquip.html">Edit Equipment Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Licence.html">Licence Agreement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Caveats.html">History, Caveats and How to Contact Me</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Asset Manager</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Introduction</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/RSTs/Introduction.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="welcome-to-asset-manager">
+<h2>Welcome to Asset Manager<a class="headerlink" href="#welcome-to-asset-manager" title="Permalink to this headline">¶</a></h2>
+<p>This Excel-based utility is designed to manage non-consumable devices in Operating Theatres and Post-Op Recovery. It replaces a ledger-based approach to tracking devices. Asset Manager extends Excel through forms and code written in Visual-Basic for Applications, which is part of the Microsoft Excel product.</p>
+<p>Each device is entered as a record on the DEVDATA spreadsheet in AssetMgr. The information for this device will include: the SAID number, the name of the device, serial and model numbers, as well as original cost and date put into service. Additionally, the record should contain the device’s status (In Service, Repair, Stored, and so forth), classification, Test-n-Tag date and associated image file, if one exists.</p>
+<p>Devices in Asset Manager are identified by a number assigned to that device by the organisation: the SAID number. Searches for a device in the spreadsheet use this unique number.</p>
+<p>Asset Manager tracks devices throughout their “life” in the organisation as a series of events. An event can be “In Service”, “To Repair”, “Decommissioned”, “On Loan” and “Returned”, and “Stored”. Device repair information is recorded  to help build a history on a device.</p>
+<p>Asset Manager creates a number of reports about devices and their status.</p>
+</div>
+<div class="section" id="how-to-best-use-help">
+<h2>How to Best Use Help<a class="headerlink" href="#how-to-best-use-help" title="Permalink to this headline">¶</a></h2>
+<p>While Asset Manager’s use seems pretty straight-forward to the developer, he realises that his approach to managing equipment may seem less than intuitive to other inhabitants of the solar system: hence, this Help file.</p>
+<p>As Microsoft in their wisdom didn’t see fit to include a means to provide a very flexible custom help documentation system without installing questionable add-ons - something most security-conscious IT departments of organisations such as Queensland Health would definitely never permit - an approach had to be come up with that would provide the information quickly and accurately. Therefore, I have chosen HTML (think: Web) pages to display documentation in, using Sphinx to provide the framework. The approach to finding help in these pages depends on how the user generally searches for help, but the following is the suggested approach.</p>
+<p>When the user clicks on the Help button, that user will be offered this help file to read. It is suggested to make use of the Quick Search feature <em>first</em>, entering the name of the button or control on the form the user has a question about. Help will display a number of context-specific help options.</p>
+<p>For example, let’s say help is needed on the purpose of this button:</p>
+<img alt="../_images/am01GettingHelp01.png" src="../_images/am01GettingHelp01.png" />
+<p>Moving the mouse cursor over the button will display the name of the control. Sometimes the tool-tip text will appear beneath the control instead of next to the cursor:</p>
+<img alt="../_images/am01GettingHelp02.png" src="../_images/am01GettingHelp02.png" />
+<p>Make a note of this name, click on the Help button, and then, in the Quick Search field:</p>
+<img alt="../_images/am01GettingHelp03a.png" src="../_images/am01GettingHelp03a.png" />
+<p>…type the name of the button or control and press &lt;Enter&gt;.</p>
+<p>If Quick Search does not produce any results, please notify the developer.</p>
+</div>
+<div class="section" id="conventions-and-glossary-of-terms">
+<h2>Conventions and Glossary of Terms<a class="headerlink" href="#conventions-and-glossary-of-terms" title="Permalink to this headline">¶</a></h2>
+<p>This help file assumes certain conventions:</p>
+<p><strong>Physical keys you type on</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li>&lt;Enter&gt; - the Enter key, at the right side of the keyboard</li>
+<li>&lt;Tab&gt;   - the Tab key, above the CapsLock key, to move from field to field</li>
+</ul>
+</div></blockquote>
+<p><strong>Representations in the text of screen objects to click on</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li>[ Close ] - represents a clickable button</li>
+<li>(_o_) - represents a selected radio button</li>
+<li>(___) - represents a deselected radio button</li>
+<li>[_X_] - represents a selected tick box</li>
+<li>[___] - represents a deselected tick box</li>
+</ul>
+</div></blockquote>
+<p><strong>Names of objects in a form</strong></p>
+<div class="figure" id="id1">
+<a class="reference internal image-reference" href="../_images/amEditFTextB.png"><img alt="../_images/amEditFTextB.png" src="../_images/amEditFTextB.png" style="width: 173.0px; height: 35.0px;" /></a>
+<p class="caption"><span class="caption-text">Textbox - allows entry of free text. Some text boxes automatically convert text to upper-case. <em>Example shown: the SAID field on the “Add or Edit Equipment” form.</em></span></p>
+</div>
+<div class="figure" id="id2">
+<a class="reference internal image-reference" href="../_images/amEditFDropB.png"><img alt="../_images/amEditFDropB.png" src="../_images/amEditFDropB.png" style="width: 248.0px; height: 37.0px;" /></a>
+<p class="caption"><span class="caption-text">Dropdown - Also known as a “Combobox”, it appears to be a textbox with a down-arrow on the right-hand side. Contains a listbox of selectable items, but will also allow keyboard entry of text. <em>Example shown: the DeviceType dropdown on the “Add or Edit Equipment” form.</em></span></p>
+</div>
+<div class="figure" id="id3">
+<a class="reference internal image-reference" href="../_images/amEditFTickB.png"><img alt="../_images/amEditFTickB.png" src="../_images/amEditFTickB.png" style="width: 104.0px; height: 29.0px;" /></a>
+<p class="caption"><span class="caption-text">Tickbox - acts as a toggle to turn a condition on or off. <em>Example shown: the New Event tickbox on the “Add or Edit Equipment” form.</em></span></p>
+</div>
+<div class="figure" id="id4">
+<a class="reference internal image-reference" href="../_images/amEditFRdioB.png"><img alt="../_images/amEditFRdioB.png" src="../_images/amEditFRdioB.png" style="width: 223.0px; height: 55.0px;" /></a>
+<p class="caption"><span class="caption-text">Radio button - used to select one - and only one - of several choices. <em>Example shown: the Device Status radio-buttons on the “Add or Edit Equipment” form.</em></span></p>
+</div>
+<div class="figure" id="id5">
+<a class="reference internal image-reference" href="../_images/amMainFToggle.png"><img alt="../_images/amMainFToggle.png" src="../_images/amMainFToggle.png" style="width: 521.0px; height: 116.0px;" /></a>
+<p class="caption"><span class="caption-text">Toggle - turns a condition on or off. <em>In this example from the “Equipment Management” form, the “All” toggle, when depressed, displays devices from all locations whilst displaying a Location column in the Devices List, with the Location/Owner dropdown empty and disabled. When the “All” toggle is not depressed, the Owner/Location dropdown is enabled, and a Location displays in the dropdown, with all devices of that type and in that location displaying in the Devices listbox.</em></span></p>
+</div>
+<div class="figure" id="id6">
+<a class="reference internal image-reference" href="../_images/amMainFListB.png"><img alt="../_images/amMainFListB.png" src="../_images/amMainFListB.png" style="width: 538.4px; height: 214.4px;" /></a>
+<p class="caption"><span class="caption-text">Listbox - contains a list of items or list of information on an item. <em>Example shown: the Devices List on the “Equipment Management” form.</em></span></p>
+</div>
+<div class="figure" id="id7">
+<a class="reference internal image-reference" href="../_images/amEditFSaveB.png"><img alt="../_images/amEditFSaveB.png" src="../_images/amEditFSaveB.png" style="width: 50.0px; height: 49.0px;" /></a>
+<p class="caption"><span class="caption-text">Button - also known as a “command button”, used to invoke actions, such as closing the form, opening forms, and saving information, as the above button does when clicked. <em>Example shown: the Save button on the “Add or Edit Equipment” form.</em></span></p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="GetStarted.html" class="btn btn-neutral float-right" title="Getting Started" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../index.html" class="btn btn-neutral" title="Welcome to Asset Manager’s documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Robyn Hahn
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

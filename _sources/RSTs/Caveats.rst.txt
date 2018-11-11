@@ -1,0 +1,38 @@
+######################################
+History, Caveats and How to Contact Me
+######################################
+
+
+History
+*******
+
+Asset Manager was developed as a response to my accepting the Device Manager portfolio in PACU. When I asked what means were provided to track devices, I was given a ledger with paper in it: lined paper.
+
+Um, no. That wasn't going to work.
+
+Right about the time I was given that portfolio, inventory on non-consumables was being conducted in our Operating Theatres and PACU/Day Surgery. As that inventory process was nearing completion, I asked those responsible whether I could obtain a copy of the data. I was sent a CSV file, which I imported into Excel. This provided the framework for the main DEVDATA worksheet.
+
+
+Caveats
+*******
+
+Asset Manager is all contained in a stand-alone Excel workbook. Although I would have preferred a proper database, Excel was all I had available within the organisation I was developing in, so I commandeered it to act as a flat-file database. Excel as a database is not ideal, but through the quirky magic of Visual Basic for Applications, it generally works as expected. No question it is definitely an improvement over a physical ledger.
+
+VBA itself is not the stellar language to write solutions in one could hope or wish for, and my knowledge on how it works is a bit less than comprehensive. Therefore, someone following me in trying to maintain/fix the code may wonder at some of the kludges I employed. As I learn more on how to do this all properly, the kludges are being removed/replaced, but whilst I try to be as professional as I could developing this tool, Asset Manager is pedestrian code at best.
+
+The developer of this tool makes no claims as to the accuracy or reliability of the data, nor are there any guarantees, implied or real, as to the document's fitness for purpose. I.e., it is presented and delivered as-is. Please keep this in mind when using this tool.
+
+The code supporting the use of this document - i.e., the "software" - is FOSS (free/open-source software). Please see the main page for the licence agreement associated with this software. Therefore, I ask the user's patience with the code... it is what it is.
+
+If you manage to break it, you get to keep both pieces.
+
+
+How to Contact the Developer
+****************************
+
+Whilst software developers endeavour to write clean, robust software with consistent, predictable behaviour, bugs do happen. The CallSheet developer is committed to supporting CallSheet, hence this document and a web presence on github.
+
+A number of means exist to contact the developer:
+
+   * gmail: robinseahahn@gmail.com
+   * github: robinboncoeur

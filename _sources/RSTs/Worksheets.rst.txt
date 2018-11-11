@@ -1,0 +1,93 @@
+##############
+The Worksheets
+##############
+
+
+***************
+Main Worksheets
+***************
+
+Asset Manager is an Excel workbook comprised of several worksheets. 
+
+Two worksheets - DEVDATA and EVENTDATA - contain the actual data. The records are "linked" by a column (field) both sheets share: the SAID number field. In DEVDATA, the SAID Number field contains unique records: each SAID represents one device. While in EVENTDATA, the SAID references the device in DEVDATA, each record is a unique event for the devices, so as a device can see numerous events, the SAID number will not be a unique identifier for records in EVENTDATA.
+
+Unfortunately, Excel doesn't support SQL, so there is no way to set up data relationships as a proper relational database would, with key fields and SELECT statements, so relationships have to be done somewhat manually with code. Which mostly works, albeit much slower.
+
+
+Device Data
+===========
+
+DEVDATA contains the device information originally supplied by Materiel Management. For that reason, several of the columns have little relevance for our purposes. The columns that are used by the program are the one in italics in the following list:
+
+================== ======================================================================
+      Name                                      Description
+================== ======================================================================
+SAIDNumber         *Unique asset number assigned by BTS/Mat Management*
+DeviceDescription  *Name of the device*
+Status             *In Service, To Repairs, Decommissioned, Stored, etc*
+Location           *Most recent site device was sighted*
+Owner              Used if on loan from another site
+Asset              --Not used--
+FuncLocation       --Not used--
+FuncLocationDesc   --Not used--
+CostCentre         Unreliable, not used
+Manufacturer       *All caps for consistency*
+ModelNumber        *Inconsistently documented in BTS, helps identify device*
+SerialNumber       *Inconsistently documented in BTS, helps identify device*
+AcquisitionDate    --Not used--
+AcquisitionValue   --Not used--
+CurrentAge         --Not used--
+EquipmentType      *Classification, used to group devices within the software*
+DeviceImage        *Optional: image of the device, displayed in the software*
+Test-n-Tag         *Date of last BTS Test-and-Tag*
+================== ======================================================================
+
+Event Data
+==========
+
+EVENTDATA contains event  information for devices, i.e., things that have happened, like "put into service", "sent to repair", "retired" and so forth. This data is original to Asset Manager and is not readily available through other information outlets, such as Materiel Management or BTS. Thus, all columns have total relevance. The columns are:
+
+============= ==========================================================================
+      Name                                      Description
+============= ==========================================================================
+SAIDNumber    Number assigned by BTS/Mat Management, also the key field
+EditedBy      Name of the person preforming the documentation
+ChangedDate   Event date
+DatedStatus   Device status on this date: In Service, To Repairs, Decommissioned, etc.
+Notes         Details regarding that status
+EventID       Unique identifier for that event
+============= ==========================================================================
+
+
+*********************
+Supporting Worksheets
+*********************
+
+The rest of the tabs at the bottom of the workbook represent support worksheets:
+
+=========== =======================================================================
+  Name                                      Description
+=========== =======================================================================
+Meta        Data lists used by the software - generally, not to be edited directly
+Contacts    Vendors, suppliers and other contacts (sort-of a virtual Rolodex) 
+ByType      Report
+DevHist     Report
+Repair      Temporary report sheet
+Images      Image list and location - its future is in doubt
+=========== =======================================================================
+
+In short, the worksheets each serve a purpose. The main ones are summarised below:
+
+   **Top**: -- serves only one purpose: to launch the form.
+
+   **DevData**: -- A set of records of non-consummable (assetable) Devices
+
+   **EventData**: -- Records of events for those devices.
+
+   **Meta**: -- contains names and associated abbreviations. It also stores cross-session information, like last opened device record and details, last user and whether the form is running in debug mode or not.
+
+   **Contacts**: -- is a vendor Rolodex of sorts.
+
+   **ByType**: -- is a report sheet. Useful for collecting test-n-tag information.
+
+   **DevHist**: -- is a report sheet, listing of a specific item type, with a history for each device.

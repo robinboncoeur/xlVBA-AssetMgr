@@ -1,0 +1,383 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>The Worksheets &mdash; Asset Manager 2.25 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Equipment Management - The Forms" href="FormsIntro.html" />
+    <link rel="prev" title="Getting Started" href="GetStarted.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Asset Manager
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="GetStarted.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">The Worksheets</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#main-worksheets">Main Worksheets</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#device-data">Device Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#event-data">Event Data</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#supporting-worksheets">Supporting Worksheets</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="FormsIntro.html">Equipment Management - The Forms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="EquipMain.html">Equipment Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="EditEquip.html">Edit Equipment Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Licence.html">Licence Agreement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Caveats.html">History, Caveats and How to Contact Me</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Asset Manager</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>The Worksheets</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/RSTs/Worksheets.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="the-worksheets">
+<h1>The Worksheets<a class="headerlink" href="#the-worksheets" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="main-worksheets">
+<h2>Main Worksheets<a class="headerlink" href="#main-worksheets" title="Permalink to this headline">¶</a></h2>
+<p>Asset Manager is an Excel workbook comprised of several worksheets.</p>
+<p>Two worksheets - DEVDATA and EVENTDATA - contain the actual data. The records are “linked” by a column (field) both sheets share: the SAID number field. In DEVDATA, the SAID Number field contains unique records: each SAID represents one device. While in EVENTDATA, the SAID references the device in DEVDATA, each record is a unique event for the devices, so as a device can see numerous events, the SAID number will not be a unique identifier for records in EVENTDATA.</p>
+<p>Unfortunately, Excel doesn’t support SQL, so there is no way to set up data relationships as a proper relational database would, with key fields and SELECT statements, so relationships have to be done somewhat manually with code. Which mostly works, albeit much slower.</p>
+<div class="section" id="device-data">
+<h3>Device Data<a class="headerlink" href="#device-data" title="Permalink to this headline">¶</a></h3>
+<p>DEVDATA contains the device information originally supplied by Materiel Management. For that reason, several of the columns have little relevance for our purposes. The columns that are used by the program are the one in italics in the following list:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>SAIDNumber</td>
+<td><em>Unique asset number assigned by BTS/Mat Management</em></td>
+</tr>
+<tr class="row-odd"><td>DeviceDescription</td>
+<td><em>Name of the device</em></td>
+</tr>
+<tr class="row-even"><td>Status</td>
+<td><em>In Service, To Repairs, Decommissioned, Stored, etc</em></td>
+</tr>
+<tr class="row-odd"><td>Location</td>
+<td><em>Most recent site device was sighted</em></td>
+</tr>
+<tr class="row-even"><td>Owner</td>
+<td>Used if on loan from another site</td>
+</tr>
+<tr class="row-odd"><td>Asset</td>
+<td>–Not used–</td>
+</tr>
+<tr class="row-even"><td>FuncLocation</td>
+<td>–Not used–</td>
+</tr>
+<tr class="row-odd"><td>FuncLocationDesc</td>
+<td>–Not used–</td>
+</tr>
+<tr class="row-even"><td>CostCentre</td>
+<td>Unreliable, not used</td>
+</tr>
+<tr class="row-odd"><td>Manufacturer</td>
+<td><em>All caps for consistency</em></td>
+</tr>
+<tr class="row-even"><td>ModelNumber</td>
+<td><em>Inconsistently documented in BTS, helps identify device</em></td>
+</tr>
+<tr class="row-odd"><td>SerialNumber</td>
+<td><em>Inconsistently documented in BTS, helps identify device</em></td>
+</tr>
+<tr class="row-even"><td>AcquisitionDate</td>
+<td>–Not used–</td>
+</tr>
+<tr class="row-odd"><td>AcquisitionValue</td>
+<td>–Not used–</td>
+</tr>
+<tr class="row-even"><td>CurrentAge</td>
+<td>–Not used–</td>
+</tr>
+<tr class="row-odd"><td>EquipmentType</td>
+<td><em>Classification, used to group devices within the software</em></td>
+</tr>
+<tr class="row-even"><td>DeviceImage</td>
+<td><em>Optional: image of the device, displayed in the software</em></td>
+</tr>
+<tr class="row-odd"><td>Test-n-Tag</td>
+<td><em>Date of last BTS Test-and-Tag</em></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="event-data">
+<h3>Event Data<a class="headerlink" href="#event-data" title="Permalink to this headline">¶</a></h3>
+<p>EVENTDATA contains event  information for devices, i.e., things that have happened, like “put into service”, “sent to repair”, “retired” and so forth. This data is original to Asset Manager and is not readily available through other information outlets, such as Materiel Management or BTS. Thus, all columns have total relevance. The columns are:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="15%" />
+<col width="85%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>SAIDNumber</td>
+<td>Number assigned by BTS/Mat Management, also the key field</td>
+</tr>
+<tr class="row-odd"><td>EditedBy</td>
+<td>Name of the person preforming the documentation</td>
+</tr>
+<tr class="row-even"><td>ChangedDate</td>
+<td>Event date</td>
+</tr>
+<tr class="row-odd"><td>DatedStatus</td>
+<td>Device status on this date: In Service, To Repairs, Decommissioned, etc.</td>
+</tr>
+<tr class="row-even"><td>Notes</td>
+<td>Details regarding that status</td>
+</tr>
+<tr class="row-odd"><td>EventID</td>
+<td>Unique identifier for that event</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="supporting-worksheets">
+<h2>Supporting Worksheets<a class="headerlink" href="#supporting-worksheets" title="Permalink to this headline">¶</a></h2>
+<p>The rest of the tabs at the bottom of the workbook represent support worksheets:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="87%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Meta</td>
+<td>Data lists used by the software - generally, not to be edited directly</td>
+</tr>
+<tr class="row-odd"><td>Contacts</td>
+<td>Vendors, suppliers and other contacts (sort-of a virtual Rolodex)</td>
+</tr>
+<tr class="row-even"><td>ByType</td>
+<td>Report</td>
+</tr>
+<tr class="row-odd"><td>DevHist</td>
+<td>Report</td>
+</tr>
+<tr class="row-even"><td>Repair</td>
+<td>Temporary report sheet</td>
+</tr>
+<tr class="row-odd"><td>Images</td>
+<td>Image list and location - its future is in doubt</td>
+</tr>
+</tbody>
+</table>
+<p>In short, the worksheets each serve a purpose. The main ones are summarised below:</p>
+<blockquote>
+<div><p><strong>Top</strong>: – serves only one purpose: to launch the form.</p>
+<p><strong>DevData</strong>: – A set of records of non-consummable (assetable) Devices</p>
+<p><strong>EventData</strong>: – Records of events for those devices.</p>
+<p><strong>Meta</strong>: – contains names and associated abbreviations. It also stores cross-session information, like last opened device record and details, last user and whether the form is running in debug mode or not.</p>
+<p><strong>Contacts</strong>: – is a vendor Rolodex of sorts.</p>
+<p><strong>ByType</strong>: – is a report sheet. Useful for collecting test-n-tag information.</p>
+<p><strong>DevHist</strong>: – is a report sheet, listing of a specific item type, with a history for each device.</p>
+</div></blockquote>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="FormsIntro.html" class="btn btn-neutral float-right" title="Equipment Management - The Forms" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="GetStarted.html" class="btn btn-neutral" title="Getting Started" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Robyn Hahn
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
